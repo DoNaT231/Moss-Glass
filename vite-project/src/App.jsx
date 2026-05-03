@@ -2,14 +2,16 @@ import { Routes, Route } from 'react-router-dom'
 import Hero from './components/Hero'
 import CategorySection from './components/CategorySection'
 import FeaturedProducts from './components/FeaturedProducts'
-import ProductsPage from './pages/ProductsPage'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import WhyChooseUs from './components/WhyChooseUs'
 import AiAssistantSection from './components/AiAssistantSection'
 import CareCtaSection from './components/CareCtaSection'
+
 import CarePage from './pages/CarePage'
 import CartPage from './pages/CartPage'
+import ProductsPage from './pages/ProductsPage'
+import AiChatPage from './pages/AiChatPage'
 
 function HomePage() {
   return (
@@ -33,6 +35,7 @@ export default function App() {
       <Route path="/termekek" element={<ProductsPage />} />
       <Route path="/kosar" element={<CartPage />} />
       <Route path="/gondozas" element={<CarePage />} />
+      <Route path="/asszisztens" element={<AiChatPage />} />
     </Routes>
     <Footer />
     </>

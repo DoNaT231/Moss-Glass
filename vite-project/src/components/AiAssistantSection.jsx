@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 export default function AiAssistantSection() {
     return (
       <section
@@ -28,9 +29,12 @@ export default function AiAssistantSection() {
               <li>✔ azonnali válaszok kérdéseidre</li>
             </ul>
   
-            <button className="mt-8 rounded-full bg-[#8fbf9e] px-8 py-4 text-sm font-bold text-[#17251d] transition hover:bg-[#7aae8f]">
+            <Link
+              to="/asszisztens"
+              className="mt-8 inline-block rounded-full bg-[#8fbf9e] px-8 py-4 text-sm font-bold text-[#17251d] transition hover:bg-[#7aae8f]"
+            >
               Asszisztens indítása
-            </button>
+            </Link>
           </div>
   
           {/* CHAT MOCKUP */}

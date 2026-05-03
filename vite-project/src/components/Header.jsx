@@ -40,9 +40,12 @@ export default function Header() {
         <div className="flex items-center gap-4">
           
           {/* AI button */}
-          <button className="hidden rounded-full border border-[#254d34]/20 px-4 py-2 text-sm font-bold text-[#254d34] transition hover:bg-white md:block">
+          <Link 
+            className="hidden rounded-full border border-[#254d34]/20 px-4 py-2 text-sm font-bold text-[#254d34] transition hover:bg-white md:block"
+            to="/asszisztens"
+            >
             MI asszisztens
-          </button>
+          </Link>
 
           {/* CART */}
           <Link
