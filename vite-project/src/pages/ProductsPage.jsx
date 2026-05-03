@@ -2,156 +2,8 @@ import { Link } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { useState } from 'react'
 import AddToCartModal from '../components/AddToCartModal'
+import { products } from '../data/products'
 
-const products = {
-mini: {
-  label: 'Kis floráriumok',
-  description:
-    'Kompakt, könnyen elhelyezhető üvegbe zárt mini kertek íróasztalra, polcra vagy ajándékba.',
-  items: [
-  {
-    id: 1,
-    name: 'Heart Moss Garden',
-    category: 'Mini kertek',
-    price: '14 990 Ft',
-    badge: 'Ajándék',
-    image: '/products/szivecskés.png',
-  },
-  {
-    id: 2,
-    name: 'Vertical Forest',
-    category: 'Nagy floráriumok',
-    price: '29 990 Ft',
-    badge: 'Prémium',
-    image: '/products/ChatGPT Image Mar 21, 2026, 09_45_55 PM.png',
-  },
-  {
-    id: 3,
-    name: 'Rock Jar',
-    category: 'Mini kertek',
-    price: '9 990 Ft',
-    badge: 'Minimal',
-    image: '/products/ChatGPT Image Mar 21, 2026, 09_48_46 PM.png',
-  },
-  {
-    id: 4,
-    name: 'Classic Moss Bowl',
-    category: 'Mini kertek',
-    price: '16 990 Ft',
-    badge: 'Népszerű',
-    image: '/products/ChatGPT Image Mar 21, 2026, 09_48_53 PM.png',
-  },
-  {
-    id: 5,
-    name: 'Root Landscape',
-    category: 'Nagy floráriumok',
-    price: '27 990 Ft',
-    badge: 'Design',
-    image: '/public/products/ChatGPT Image Mar 21, 2026, 10_03_25 PM.png',
-  },
-  {
-    id: 6,
-    name: 'Desert Glass',
-    category: 'Mini kertek',
-    price: '13 990 Ft',
-    badge: 'Modern',
-    image: '/products/ChatGPT Image Mar 21, 2026, 10_15_13 PM.png',
-  },
-]
-},
-xl:{
-label: 'XL viváriumok',
-description:
-  'Nagyobb méretű, látványos növénykompozíciók nappaliba, irodába vagy prémium enteriőrbe.', 
-items: [
-  {
-    id: 5,
-    name: 'Vertical Forest XL',
-    category: 'XL floráriumok',
-    price: '29 990 Ft',
-    badge: 'Prémium',
-    image: '/products/xl/viv1.jpg',
-  },
-  {
-    id: 6,
-    name: 'Root Landscape XL',
-    category: 'XL floráriumok',
-    price: '27 990 Ft',
-    badge: 'Design',
-    image: '/products/xl/viv2.webp',
-  },
-  {
-    id: 7,
-    name: 'Rainforest Vivarium XL',
-    category: 'XL floráriumok',
-    price: '39 990 Ft',
-    badge: 'Új',
-    image: '/products/xl/viv3.png',
-  },
-  {
-    id: 8,
-    name: 'Panoráma Jungle XL',
-    category: 'XL floráriumok',
-    price: '44 990 Ft',
-    badge: 'Limitált',
-    image: '/products/xl/viv4.jfif',
-  },
-]},
-accessories:{
-label: 'Kiegészítők és gondozás',
-description:
-      'Földkeverékek, aktív szén, dekorkavics, moha és eszközök a florárium építéséhez és fenntartásához.', 
-items: [
-  {
-    id: 9,
-    name: 'Florárium földkeverék',
-    category: 'Kiegészítők',
-    price: '3 990 Ft',
-    badge: 'Föld',
-    image: '/products/accessory/soil-mix.jfif',
-  },
-  {
-    id: 10,
-    name: 'Aktív szén réteg',
-    category: 'Kiegészítők',
-    price: '2 490 Ft',
-    badge: 'Szűrés',
-    image: '/products/accessory/activated-charcoal.jfif',
-  },
-  {
-    id: 11,
-    name: 'Dekorkavics válogatás',
-    category: 'Kiegészítők',
-    price: '2 990 Ft',
-    badge: 'Dekor',
-    image: '/products/accessory/decor-stones.jfif',
-  },
-  {
-    id: 12,
-    name: 'Moss Starter Pack',
-    category: 'Kiegészítők',
-    price: '5 990 Ft',
-    badge: 'Moha',
-    image: '/products/accessory/moss-starter-pack.jfif',
-  },
-  {
-    id: 13,
-    name: 'Terrárium eszközkészlet',
-    category: 'Kiegészítők',
-    price: '6 990 Ft',
-    badge: 'Eszköz',
-    image: '/products/accessory/tool-kit.jfif',
-  },
-  {
-    id: 14,
-    name: 'Permetező palack',
-    category: 'Kiegészítők',
-    price: '1 990 Ft',
-    badge: 'Gondozás',
-    image: '/products/accessory/spray-bottle.jpg',
-  },
-]}
-}
 
 export default function ProductsPage() {
   const { addToCart } = useCart()
@@ -234,12 +86,12 @@ export default function ProductsPage() {
                     </p>
 
                     <div className="mt-5 grid grid-cols-2 gap-3">
-                      <Link
-                        to={`/termekek/${product.id}`}
-                        className="rounded-full border border-[#254d34]/20 px-4 py-3 text-center text-sm font-bold text-[#254d34] transition hover:bg-[#f4f1ea]"
-                      >
-                        Részletek
-                      </Link>
+                    <Link
+                      to={`/termekek/${groupKey}/${product.id}`}
+                      className="rounded-full border border-[#254d34]/20 px-4 py-3 text-center text-sm font-bold text-[#254d34] transition hover:bg-[#f4f1ea]"
+                    >
+                      Részletek
+                    </Link>
 
                       <button
                         onClick={() => handleAddToCart(product)}
@@ -260,7 +112,7 @@ export default function ProductsPage() {
         product={addedProduct}
         onClose={() => setAddedProduct(null)}
       />
-      
+
     </main>
   )
 }

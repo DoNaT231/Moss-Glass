@@ -5,13 +5,13 @@ const categories = [
     title: 'Mini kertek',
     text: 'Kompakt floráriumok íróasztalra, polcra vagy ajándékba.',
     image:
-      'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=85',
+      '/products/szivecskés.png',
   },
   {
     title: 'Nagy floráriumok',
     text: 'Látványos üvegkertek nappaliba, irodába vagy prémium enteriőrbe.',
     image:
-      'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=85',
+      '/products/xl/viv3.png',
   },
   {
     title: 'Gondozási eszközök',

@@ -12,6 +12,7 @@ import CarePage from './pages/CarePage'
 import CartPage from './pages/CartPage'
 import ProductsPage from './pages/ProductsPage'
 import AiChatPage from './pages/AiChatPage'
+import ProductDetailPage from './pages/ProductDetailPage'
 
 function HomePage() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
       <Route path="/kosar" element={<CartPage />} />
       <Route path="/gondozas" element={<CarePage />} />
       <Route path="/asszisztens" element={<AiChatPage />} />
+      <Route path="/termekek/:groupKey/:productId" element={<ProductDetailPage />} />
     </Routes>
     <Footer />
     </>

@@ -3,31 +3,31 @@ import { Link } from 'react-router-dom'
 const products = [
   {
     id: 1,
-    name: 'Mini Moss Garden',
-    price: '12 990 Ft',
+    name: 'Classic Moss Bowl',
+    price: '16 990 Ft',
     image:
-      'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=900&q=85',
+      '/products/ChatGPT Image Mar 21, 2026, 09_48_53 PM.png',
   },
   {
     id: 2,
-    name: 'Glass Forest XL',
+    name: 'Vertical Forest XL',
     price: '24 990 Ft',
     image:
-      'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=85',
+      '/products/xl/viv1.jpg',
   },
   {
     id: 3,
-    name: 'Terrarium Care Kit',
-    price: '6 990 Ft',
+    name: 'Moss Starter Pack',
+    price: '5 990 Ft',
     image:
-      'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=85',
+      '/products/accessory/moss-starter-pack.jfif',
   },
   {
     id: 4,
-    name: 'Urban Jungle Jar',
-    price: '18 990 Ft',
+    name: 'Terrárium eszközkészlet',
+    price: '6 990 Ft',
     image:
-      'https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=900&q=85',
+      '/products/accessory/tool-kit.jfif',
   },
 ]
 
